@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500&family=Quicksand:wght@300&display=swap');
+
+*{
+    margin:0;
+    
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+    text-decoration: none;
+}
+
+
+body{
+    min-height: 100vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url(../assets/img/a2.jpg);
+}
+
+.home-icon img{
+  filter: invert(100%);
+  margin-top: 35px;
+  width: 30px; 
+  height: auto;
+  position: relative;
+}
+
+
+  /*estacion meteorologica*/
+
+  .weather-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    background-color: #2d2f41;
+    width: 450px;
+    height: 450px;
+    box-shadow: 0 5px 25px rgba(14, 21, 37, 0.8);
+    border-radius: 10px;
+    margin: 10px;
+    overflow: hidden;
+    
+}
+
+
+#location {
+background: -webkit-linear-gradient(90deg, #634dff, #5fd4ff);
+-webkit-text-fill-color: transparent;
+background-clip: text;
+font-size: 30px;
+letter-spacing: 2px;
+margin-top: 30px;
+}
+
+#condition {
+font-size: 23px;
+background: -webkit-linear-gradient(90deg, #ff5e9a, #ffb960);
+-webkit-text-fill-color: transparent;
+background-clip: text;
+letter-spacing: 3px;
+font-weight: lighter;
+}
+
+#icon {
+width: 90px;
+height: 90px;
+}
+
+p{
+margin-top: -20px;
+font-size: 40px;
+
+}
+
+.caracteristicas {
+display: flex;
+flex-direction: row;
+flex-wrap: nowrap;
+gap: 19px;
+font-size: 11px;
+letter-spacing: 2px;
+margin-top: 30px;
+}
+
+h3{
+font-weight: lighter;
+}
+
+.forecast{
+display: flex;
+flex-direction: column;
+flex-wrap: nowrap;
+align-items: center;
+text-align: center;
+}
+
+.hourly-forecast-container {
+display: flex;
+flex-direction: row;
+overflow-x: scroll;
+scroll-snap-type: x mandatory;
+align-items: center;
+}
+
+.hourly-forecast {
+display: flex;
+overflow: hidden;
+scroll-snap-align: start;
+flex: 0 0 auto;
+align-items: center;
+justify-content: center;
+font-weight: lighter;
+gap: 15px;
+}
+
+
+.hourly-forecast img {
+width: 50px; 
+height: 50px; 
+margin: 15px;
+margin-right: -60px;
+}
+

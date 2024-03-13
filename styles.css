@@ -1,0 +1,531 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500&family=Quicksand:wght@300&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+    text-decoration: none;
+}
+
+body{
+    min-height: 100vh;
+    display:flex;
+    justify-content: center;
+    background-image: url(assets/img/a14.jpg);
+    
+}
+
+
+.dashboard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*icons*/
+
+.icons{
+  position: relative;
+  color: #fff;
+  background-color: #2d2f41;
+  width: 450px;
+  height: 80px;
+  padding: 20px 45px;
+  box-shadow: 0 5px 25px rgba(14, 21, 37, 0.8);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 50px;
+  gap: 35px;
+}
+
+.icons:before{
+content:'';
+position: absolute;
+background: linear-gradient(45deg, #24ff6d, #2f93f1, #ff5e9a);
+background-size: 200% 200%;
+top: -5px;
+left: -5px;
+bottom: -5px;
+right: -5px;
+z-index: -1;
+filter: blur(40px);
+animation: glowing 10s ease infinite;
+}
+
+.icons img{
+  filter: invert(100%);
+  width: 35px;
+  
+}
+/*estilos de reloj y calendario*/
+
+.digital-clock{
+    position: relative;
+    color: #fff;
+    background-color: #2d2f41;
+    width: 450px;
+    height: 280px;
+    padding: 20px 45px;
+    box-shadow: 0 5px 25px rgba(14, 21, 37, 0.8);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 90px;
+    
+}
+
+.time{ 
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hours, .dots, .minutes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    padding: 0 10px;
+    line-height: 125px;
+}
+
+.hours, .minutes{
+    font-size: 5em;
+    width: 125px;
+}
+
+.dots{
+    font-size: 5em;
+    color: #929292;
+}
+
+.hours{
+    background: -webkit-linear-gradient(90deg, #634dff, #5fd4ff);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.dots{
+    background: -webkit-linear-gradient(90deg, #5fd4ff, #ff5e9a);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.minutes{
+    background: -webkit-linear-gradient(90deg, #ff5e9a, #ffb960);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+ .right-side{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+   margin-right: 10px;
+ }
+
+ .period, .seconds{
+    font-size: 1.2em;
+    font-weight: 500;
+ }
+
+ .period{
+    transform: translateY(-10px);
+    background: -webkit-linear-gradient(90deg, #f7b63f, #faf879);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+ }
+
+ .seconds{
+    transform: translateY(10px); 
+    background: -webkit-linear-gradient(90deg, #24ff6d, #2f93f1);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+ }
+
+ .calendar{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3em;
+    font-weight: 500;
+    margin-bottom: 5px;
+    background: -webkit-linear-gradient(90deg, #ae4af6, #ff98d1);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+ }
+
+ .day-name, .day-number, .year, .de, .del{
+    margin-left: 8px;
+    letter-spacing: 1px;
+    padding: 5px;
+ }
+ 
+ .dot-menu-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    color: white;
+    top: 0;
+    right: 0;
+    margin: 5px;
+    font-size: 1em;
+    cursor: pointer;
+ }
+
+ .menu-item{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .clock-format-text{
+    color: #efefef;
+    font-size: 1em;
+    margin-right: 20px;
+ }
+
+ .format-switch-btn{
+    width: 35px;
+    height: 15px;
+    background-color: #485470;
+    border-radius: 75px;
+    box-shadow: inset 2px 2px 4px rgba(255, 255, 255, 0.1),
+                inset -2px -2px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .format-switch-btn:before{
+    content:'';
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background-color: #ff5e9a;
+    border-radius: 50%;
+    box-shadow: 0 5px 25px #ff5e9a;
+    transform: translateX(-10px);
+    transition: 0.3 ease;
+    transition-property: background, transform;
+ }
+ .format-switch-btn.active:before{
+    background-color: #0bff8d;
+    box-shadow: 0 5px 25px #0bff8d;
+    transform: translateX(10px);
+ }
+
+ /*estilos de contraseña segura*/
+
+ .container-password{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    color: #fff;
+    background-color: #2d2f41;
+    width: 450px;
+    height: 400px;
+    box-shadow: 0 5px 25px rgba(14, 21, 37, 0.8);
+    border-radius: 10px;
+    margin-top: 50px;
+    margin: 20px;
+}
+ 
+.titulo{
+    margin: 15px;
+    font-size: 25px;
+    letter-spacing: 2px;
+    background: -webkit-linear-gradient(180deg, #ae4af6, #ff98d1);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+#text-contrasena{
+    color: white;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    border-radius: 5px;
+    width: 95%;
+}
+
+.container-marco{
+text-align: center;
+padding: 20px;
+}
+
+
+.container-marco input{
+    font-size: 1em;
+    text-align: center;
+    padding: 5px;
+    letter-spacing: 2px;
+    border-radius: 5px;
+    
+}
+
+.container-range label {
+    font-size: 1em;
+}
+
+.checkbox {
+    margin-top:10px;
+    
+}
+
+.checkbox label{
+    font-size: 1em;
+}
+
+.button {
+    padding: 10px;
+    background: linear-gradient(90deg, #ff5e9a, #ffb960);
+    color: white;
+    font-weight: light;
+    margin-top: 40px;
+    cursor: pointer;
+    border: none;
+    border-radius: 15px;
+}
+.container-range input[type="range"] {
+    -webkit-appearance: none;
+    width: 80%;
+    margin: 7px;
+    border-radius: 25px;
+    height: 1px;
+  }
+
+
+  .container-range input[type="range"]::-webkit-slider-runnable-track {
+    cursor: pointer;
+    height: 8px;
+    animation: 0.2s;
+    background: -webkit-linear-gradient(180deg,#24ff6d, #2f93f1);
+    border-radius: 25px;
+}
+
+.container-range input[type="range"]::-webkit-slider-thumb {
+    border: none;
+    height: 18px;
+    width: 18px;
+    border-radius: 25px;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -6.5px;
+    background-color: #0bff8d;
+    box-shadow: 0 5px 25px #0bff8d;
+    transform: translateX(10px);
+  }
+
+  /*estilo enlaces*/
+  .container-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    background-color: #2d2f41;
+    width: 450px;
+    height: 300px;
+    box-shadow: 0 5px 25px rgba(14, 21, 37, 0.8);
+    border-radius: 10px;
+    margin: 20px;
+    overflow: hidden;
+  }
+
+  .listado {
+    margin: 10px;
+    font-size: 25px;
+    letter-spacing: 2px;
+    background: -webkit-linear-gradient(180deg, #ff5e9a, #ffb960);
+    -webkit-text-fill-color: transparent;
+    background-clip: text
+  }
+
+  .tit, .link {
+    margin: 10px;
+    padding: 5px;
+    width: 250px;
+    color: white;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    border-radius: 5px;
+    text-align: center;
+    letter-spacing: 2px;
+  }
+
+  .link-btn {
+    padding: 10px;
+    width: 130px;
+    background: linear-gradient(90deg, #634dff, #5fd4ff);
+    color: white;
+    font-weight: light;
+    font-size: 15px;
+    letter-spacing: 2px;
+    margin-top: 10px; 
+    cursor: pointer;
+    border: none;
+    border-radius: 15px;
+  }
+
+  .container-links {
+    max-height: 400px;
+    overflow-y: auto;
+  }
+
+  .lista-container {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .lista-links {
+    list-style: none;
+    text-decoration: none;
+    padding: 10px;
+    margin: 0;
+  }
+
+  .lista-links li {
+    margin-bottom: 10px;
+    color: white;
+    letter-spacing: 2px;
+    font-weight: lighter;
+    text-decoration: none;
+  }
+
+  .lista-links a {
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    font-size: 15px;
+  }
+
+  .btn-eliminar {
+    background: linear-gradient(90deg, #f7b63f, #faf879);
+    color: white;
+    padding: 5px;
+    border: none;
+    border-radius: 25px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    font-size: 10px;
+    font-weight: bolder;
+  }
+
+
+  .btn-eliminar:hover {
+    box-shadow: 0 3px 15px #f7b63f;
+  }
+
+  /*estacion meteorologica*/
+
+  .weather-container{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        color: #fff;
+        background-color: #2d2f41;
+        width: 450px;
+        height: 450px;
+        box-shadow: 0 5px 25px rgba(14, 21, 37, 0.8);
+        border-radius: 10px;
+        margin: 20px;
+        overflow: hidden;
+  }
+
+  
+#location {
+    background: -webkit-linear-gradient(90deg, #634dff, #5fd4ff);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 30px;
+    letter-spacing: 2px;
+    margin-top: 30px;
+  }
+  
+  #condition {
+    font-size: 23px;
+    background: -webkit-linear-gradient(90deg, #ff5e9a, #ffb960);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 3px;
+    font-weight: lighter;
+  }
+  
+  #icon {
+    width: 90px;
+    height: 90px;
+  }
+
+  p{
+    margin-top: -20px;
+    font-size: 40px;
+
+  }
+  
+  .caracteristicas {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 19px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-top: 30px;
+  }
+
+  h3{
+    font-weight: lighter;
+  }
+
+ .forecast{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    margin: 30px;
+ }
+ 
+.hourly-forecast-container {
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    align-items: center;
+   
+}
+
+.hourly-forecast {
+    display: flex;
+    overflow: hidden;
+    scroll-snap-align: start;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    font-weight: lighter;
+    gap: 15px;
+}
+
+
+.hourly-forecast img {
+    width: 50px; 
+    height: 50px; 
+    margin: 15px;
+   margin-right: -60px;
+}
+

@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500&family=Quicksand:wght@300&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url(../assets/img/a2.jpg);
+}
+
+.home-icon img{
+  filter: invert(100%);
+  width: 30px; 
+  height: auto;
+  position: relative;
+}
+
+  /*estilo enlaces*/
+  .container-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    background-color: #2d2f41;
+    width: 450px;
+    height: 300px;
+    box-shadow: 0 5px 25px rgba(14, 21, 37, 0.8);
+    border-radius: 10px;
+    margin: 20px;
+    overflow: hidden;
+    position: relative;
+  }
+
+ 
+  .listado {
+    margin: 10px;
+    font-size: 25px;
+    letter-spacing: 2px;
+    background: -webkit-linear-gradient(180deg, #ff5e9a, #ffb960);
+    -webkit-text-fill-color: transparent;
+    background-clip: text
+  }
+
+  .tit, .link {
+    margin: 10px;
+    padding: 5px;
+    width: 250px;
+    color: white;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    border-radius: 5px;
+    text-align: center;
+    letter-spacing: 2px;
+  }
+
+  .link-btn {
+    padding: 10px;
+    width: 130px;
+    background: linear-gradient(90deg, #634dff, #5fd4ff);
+    color: white;
+    font-weight: light;
+    font-size: 15px;
+    letter-spacing: 2px;
+    margin-top: 10px; 
+    cursor: pointer;
+    border: none;
+    border-radius: 15px;
+  }
+
+  .container-links {
+    max-height: 400px;
+    overflow-y: auto;
+  }
+
+  .lista-container {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .lista-links {
+    list-style: none;
+    text-decoration: none;
+    padding: 10px;
+    margin: 0;
+  }
+
+  .lista-links li {
+    margin-bottom: 10px;
+    color: white;
+    letter-spacing: 2px;
+    font-weight: lighter;
+    text-decoration: none;
+  }
+
+  .lista-links a {
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    font-size: 15px;
+  }
+
+  .btn-eliminar {
+    background: linear-gradient(90deg, #f7b63f, #faf879);
+    color: white;
+    padding: 5px;
+    border: none;
+    border-radius: 25px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    font-size: 10px;
+    font-weight: bolder;
+  }
+
+
+  .btn-eliminar:hover {
+    box-shadow: 0 3px 15px #f7b63f;
+  }

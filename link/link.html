@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link</title>
+    <link rel="stylesheet" href="link.css">
+</head>
+<body>
+    <!--listado de enlaces-->
+
+<div class="container-links">
+    <h1 class="listado">Listado de Links</h1>
+  
+    <div>
+        <input type="text" id="titulo" class="tit" placeholder="Ingrese el título">
+    </div>
+    <div>
+        <input type="text" id="enlace" class="link" placeholder="Ingrese el enlace">
+    </div>
+  
+    <button onclick="agregarLink()" class="link-btn">Añadir</button>
+  
+    <div class="lista-container">
+      <ul id="lista-links" class="lista-links"></ul>
+  </div>
+  </div>
+
+  <div class="home" id="home">
+    <a href="../index.html"class="home-icon"><img src="../assets/icons/home.svg"></a>
+</div>
+
+  <script src="link.js"></script>
+</body>
+</html>
