@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Break</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+
+
+<body>
+
+  <div class= "dashboard">
+
+    <div class="icons" id="icons">
+
+      <a href="watch/reloj.html"><img src="assets/icons/stopwatch.svg"></a>
+     
+     <a href="password/password.html"><img src="assets/icons/lock.svg"></a>
+
+     <a href="link/link.html"><img src="assets/icons/link.svg"></a>
+
+     <a href="weather/weather.html"><img src="assets/icons/cloud-sun.svg"></a>
+    </div>
+
+
+  <!--reloj-->
+
+<div class="digital-clock">
+  <ul class="dot-menu">
+    <li class="menu-item"> 
+      <span class="clock-format-text"></span>
+      <div class="format-switch-btn" data-format="12"></div>
+    </li>
+  </ul>
+    <div class="time">
+      <span class="hours">00</span> 
+      <span class="dots">:</span>
+      <span class="minutes">00</span> 
+
+      <div class="right-side">
+        <span class="period">AM/PM</span>
+        <span class="seconds">00</span>
+      </div>
+    </div>
+    <div class="calendar">
+      <span class="day-name">Day</span>,
+      <span class="day-number">00</span>
+      <span class="de">DE</span>
+      <span class="month-name">Month</span>
+      <span class="del">DEL</span>
+      <span class="year">0000</span>
+    </div>
+</div>
+
+
+<!--contraseña segura-->
+<div class="container-password">
+  <div class="container-marco">
+    <h1 class="titulo">Generador de Contraseña</h1>
+
+    <input id="text-contrasena" type="text" disabled>
+
+    <div class="container-range">
+      <label for="min-length">12</label>
+      <input id="range" type="range" min="12" max="50" step="1">
+      <label for="max-length">50</label>
+    </div>
+
+    <div class="container-settings">
+
+      <div class="checkbox">
+        <input id="uppercase" type="checkbox" name="uppercase" checked>
+        <label for="uppercase">Incluir Mayusculas</label>
+      </div>
+
+      <div class="checkbox">
+        <input id="lowercase" type="checkbox" name="lowercase" checked>
+        <label for="lowercase">Incluir Minusculas</label>
+      </div>
+
+      <div class="checkbox">
+        <input id="number" type="checkbox" name="number" checked>
+        <label for="number">Incluir Numeros</label>
+      </div>
+
+      <div class="checkbox">
+        <input id="symbol" type="checkbox" name="symbol" checked>
+        <label for="symbol">Incluir Simbolos</label>
+      </div>
+
+      <button id="btn-generate" class="button" onclick="validarCampos(); return false;">
+      Generar contraseña</button>
+
+    </div>
+  </div>
+</div>
+
+<!--listado de enlaces-->
+
+<div class="container-links">
+  <h1 class="listado">Listado de Links</h1>
+
+  <div>
+      <input type="text" id="titulo" class="tit" placeholder="Ingrese el título">
+  </div>
+  <div>
+      <input type="text" id="enlace" class="link" placeholder="Ingrese el enlace">
+  </div>
+
+  <button onclick="agregarLink()" class="link-btn">Añadir</button>
+
+  <div class="lista-container">
+    <ul id="lista-links" class="lista-links"></ul>
+</div>
+</div>
+
+
+<!--estacion meteorologica-->
+
+<div id="weather-container" class="weather-container">
+  <h1 id="location"></h1>
+  <h2 id="condition"></h2>
+  <img id="icon" alt="Weather Icon">
+  <p id="temperature"></p>
+
+<div class="caracteristicas">
+  <h3 id="precipitation"></h3>
+  <h3 id="humidity"></h3>
+  <h3 id="wind"></h3>
+</div>
+
+
+<div class="forecast">
+  <div class="hourly-forecast-container">
+    <div class="hourly-forecast" id="hourly-forecast"></div>
+  </div>
+</div>
+</div>
+
+</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
